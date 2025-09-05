@@ -26,6 +26,8 @@ def train_rnn(train_series, val_series=None, seq_len=10, hidden_size=32,
     lossf = nn.MSELoss()
 
     best_loss = float("inf")
+    best_state = None
+    
     for ep in range(1, epochs+1):
         model.train()
         running = 0.0
@@ -46,5 +48,8 @@ def train_rnn(train_series, val_series=None, seq_len=10, hidden_size=32,
         if ep % 10 == 0:
             print(f"Epoch {ep:03d} | train MSE: {epoch_loss:.6f}")
 
-    model.load_state_dict(best_state)
+    # Cargar el mejor modelo
+    if best_state is not None:
+        model.load_state_dict(best_state)
+    
     return model, best_loss
