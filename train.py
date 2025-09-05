@@ -48,7 +48,6 @@ def train_rnn(train_series, val_series=None, seq_len=10, hidden_size=32,
         if ep % 10 == 0:
             print(f"Epoch {ep:03d} | train MSE: {epoch_loss:.6f}")
 
-    # Cargar el mejor modelo
     if best_state is not None:
         model.load_state_dict(best_state)
     
