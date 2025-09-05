@@ -1,0 +1,59 @@
+# Archivos de Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.so
+
+# Entornos virtuales
+venv/
+ENV/
+env/
+.venv/
+*.egg-info/
+.eggs/
+
+# Archivos de configuración locales
+*.log
+*.tmp
+*.swp
+*.bak
+
+# Archivos de Jupyter
+.ipynb_checkpoints/
+*.ipynb~
+
+# Configuración de IDEs
+.vscode/
+.idea/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Datos y resultados
+*.csv
+*.tsv
+*.json
+*.xlsx
+*.xls
+*.db
+*.sqlite3
+
+# Modelos y checkpoints
+*.pt
+*.pth
+*.ckpt
+
+# Carpeta de salidas
+outputs/
+models/
+reports/
+figures/
+
+# Archivos comprimidos
+*.zip
+*.tar
+*.gz
+*.bz2
